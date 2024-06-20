@@ -15,7 +15,7 @@ services:
       - DB_NAME=webscraping
       - DB_USER=yoonjusong
       - DB_PASS=1234
-    depends_on:
+    depends_on:    #DB준비가 되면 컨테이너실행
       - db
 
   
