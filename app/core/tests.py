@@ -6,7 +6,6 @@ from django.core.management import call_command
 from django.db.utils import OperationalError
 from django.test import SimpleTestCase
 
-
 @patch('django.db.utils.ConnectionHandler.__getitem__')
 class CommandTests(SimpleTestCase):
     #Test commands.
@@ -28,4 +27,3 @@ class CommandTests(SimpleTestCase):
         call_command('wait_for_db')
 
         self.assertEqual(patched_getitem.call_count, 6)
-        
